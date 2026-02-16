@@ -1,16 +1,12 @@
-import React from 'react';
+import { getServiceById } from "@/app/actions/serviceActions";
+import ServiceDetailsClient from "./serviceDetailsClient";
 
-const ServiceDetailsPage = async ({params}) => {
-    
-    const {id} = await params
-    console.log(id);
-    
 
-    return (
-        <div>
-           Service Details Page {id} 
-        </div>
-    );
-};
+export default async function ServicePage({ params }) {
+  const { id } = await params;
 
-export default ServiceDetailsPage;
+  const service = await getServiceById(id);
+  if (!service) return <p className="text-center py-12">Service not found</p>;
+
+  return <ServiceDetailsClient service={service} />;
+}

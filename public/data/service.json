@@ -1,0 +1,206 @@
+[
+  {
+    "name": "Infant Baby Care",
+    "category": "Baby Care",
+    "price": 2500,
+    "duration": "Per Day",
+    "rating": 4.8,
+    "availability": "24/7 Available",
+    "description": "Professional infant care service designed to ensure maximum safety, hygiene, and emotional comfort for newborns and toddlers. Our certified caregivers follow structured routines that include feeding assistance, sleep monitoring, hygiene maintenance, and early developmental engagement. With continuous supervision and emergency preparedness, we provide parents with complete peace of mind while ensuring the baby’s healthy growth and nurturing environment.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140407/new-born-care-essentials_bxtuln.jpg",
+    "features": [
+      "Certified caregivers",
+      "Newborn hygiene support",
+      "Feeding assistance",
+      "Sleep monitoring",
+      "Emergency response trained"
+    ]
+  },
+  {
+    "name": "Toddler Care Support",
+    "category": "Baby Care",
+    "price": 2200,
+    "duration": "Per Day",
+    "rating": 4.7,
+    "availability": "Daytime Only",
+    "description": "Safe and engaging toddler care service focused on structured learning, creative play, and emotional development. Our caregivers create a stimulating environment that encourages cognitive growth, social interaction, and physical activity. Alongside daily meal supervision and safety monitoring, parents receive consistent progress updates to stay informed about their child’s development and overall well-being.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140407/Toddler-Child-Care-1_ozehgd.jpg",
+    "features": [
+      "Play-based learning",
+      "Meal supervision",
+      "Activity engagement",
+      "Safety monitoring",
+      "Daily progress updates"
+    ]
+  },
+  {
+    "name": "Special Needs Child Care",
+    "category": "Baby Care",
+    "price": 3000,
+    "duration": "Per Day",
+    "rating": 4.9,
+    "availability": "Flexible Hours",
+    "description": "Dedicated and compassionate care service tailored specifically for children with special needs. Our trained professionals provide personalized care plans that include therapy assistance, behavioral support, and continuous communication with parents. With a focus on patience, understanding, and structured development, we ensure a safe and empowering environment for every child.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140406/special-needs_dwnnqd.jpg",
+    "features": [
+      "Special needs training",
+      "Therapy assistance",
+      "Behavioral support",
+      "Personalized care plan",
+      "Parent communication"
+    ]
+  },
+  {
+    "name": "Elderly Home Care",
+    "category": "Elderly Care",
+    "price": 3500,
+    "duration": "Per Day",
+    "rating": 4.8,
+    "availability": "24/7 Available",
+    "description": "Compassionate in-home elderly care service ensuring comfort, dignity, and professional support for senior individuals. Our caregivers assist with mobility, medication reminders, personal hygiene, and meal preparation while offering meaningful companionship. We prioritize emotional well-being and safety, helping seniors maintain independence in the comfort of their own home.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140566/elder-home-care-2_wkh72a.jpg",
+    "features": [
+      "Mobility assistance",
+      "Medication reminders",
+      "Meal preparation",
+      "Personal hygiene support",
+      "Emotional companionship"
+    ]
+  },
+  {
+    "name": "Senior Companion Service",
+    "category": "Elderly Care",
+    "price": 2800,
+    "duration": "Per Day",
+    "rating": 4.6,
+    "availability": "Flexible Hours",
+    "description": "Friendly and supportive companion service designed to reduce loneliness and enhance daily life for seniors. Our caregivers provide conversation, light housekeeping, wellness monitoring, and assistance with routine activities. This service promotes emotional stability, mental engagement, and a higher quality of life through consistent companionship.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140406/companion-service_efmw3w.jpg",
+    "features": [
+      "Conversation support",
+      "Outdoor walks",
+      "Light housekeeping",
+      "Daily assistance",
+      "Wellness monitoring"
+    ]
+  },
+  {
+    "name": "Post-Surgery Elder Care",
+    "category": "Elderly Care",
+    "price": 4000,
+    "duration": "Per Day",
+    "rating": 4.9,
+    "availability": "24/7 Available",
+    "description": "Professional post-operative elderly care service focused on safe recovery and continuous medical supervision. Our trained caregivers monitor wound healing, manage medications, assist with mobility, and coordinate with healthcare providers. We ensure a structured recovery plan that supports faster healing and minimizes health risks.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140406/post_surgery_care_at_home-640w_ugh1ov.jpg",
+    "features": [
+      "Wound care monitoring",
+      "Medication management",
+      "Mobility assistance",
+      "Recovery tracking",
+      "Doctor coordination"
+    ]
+  },
+  {
+    "name": "Home Nursing Service",
+    "category": "Patient Care",
+    "price": 4500,
+    "duration": "Per Day",
+    "rating": 4.9,
+    "availability": "24/7 Available",
+    "description": "Licensed and experienced nurses providing professional medical care in the comfort of your home. This service includes IV therapy, injections, vital signs monitoring, and comprehensive medication management. We ensure hospital-level medical attention while maintaining patient comfort and safety in a familiar environment.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140406/home-nursing-1_zelexx.png",
+    "features": [
+      "IV therapy",
+      "Injection administration",
+      "Vital signs monitoring",
+      "Medication management",
+      "Medical documentation"
+    ]
+  },
+  {
+    "name": "Chronic Illness Support",
+    "category": "Patient Care",
+    "price": 3800,
+    "duration": "Per Day",
+    "rating": 4.7,
+    "availability": "Flexible Hours",
+    "description": "Long-term support service designed for patients managing chronic health conditions. Our caregivers assist with daily health tracking, medication scheduling, doctor appointment coordination, and lifestyle monitoring. We focus on stability, preventive care, and emotional support to enhance overall quality of life.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140406/Chronic_20Illness_20Support-80_syknsm.jpg",
+    "features": [
+      "Daily health tracking",
+      "Medication scheduling",
+      "Doctor appointment coordination",
+      "Lifestyle monitoring",
+      "Emotional support"
+    ]
+  },
+  {
+    "name": "Hospital-to-Home Transition Care",
+    "category": "Patient Care",
+    "price": 4200,
+    "duration": "Per Day",
+    "rating": 4.8,
+    "availability": "On Demand",
+    "description": "Comprehensive transition care service ensuring a safe and smooth recovery after hospital discharge. Our team conducts home safety assessments, medication guidance, discharge follow-ups, and ongoing supervision. This structured approach reduces readmission risks and supports complete recovery in a secure home setting.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140406/hospital-to-home2_zcjiqd.jpg",
+    "features": [
+      "Discharge follow-up",
+      "Home safety check",
+      "Medication guidance",
+      "Recovery supervision",
+      "Family consultation"
+    ]
+  },
+  {
+    "name": "Maternity Support Service",
+    "category": "Baby Care",
+    "price": 3000,
+    "duration": "Per Day",
+    "rating": 4.8,
+    "availability": "Flexible Hours",
+    "description": "Comprehensive postnatal care service providing structured support for new mothers and newborn babies. Our caregivers assist with maternal recovery, infant feeding guidance, hygiene maintenance, and sleep routine management. We ensure emotional reassurance and professional supervision during this critical transition period.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140405/pregnancy-maternity-scene_24908-56914_rlfz3h.jpg",
+    "features": [
+      "Mother recovery support",
+      "Infant feeding guidance",
+      "Hygiene monitoring",
+      "Sleep routine assistance",
+      "Emotional care"
+    ]
+  },
+  {
+    "name": "Nighttime Baby Care",
+    "category": "Baby Care",
+    "price": 2700,
+    "duration": "Per Night",
+    "rating": 4.7,
+    "availability": "Night Shift",
+    "description": "Overnight baby care service designed to ensure safe sleep routines and uninterrupted rest for parents. Our caregivers provide night monitoring, feeding assistance, emergency handling, and structured sleep management. Detailed parent reporting ensures transparency and builds trust throughout the service period.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140405/Night-Time-Feeding_lypk1d.webp",
+    "features": [
+      "Night monitoring",
+      "Feeding assistance",
+      "Sleep routine management",
+      "Emergency handling",
+      "Parent reporting"
+    ]
+  },
+  {
+    "name": "Palliative Care Support",
+    "category": "Patient Care",
+    "price": 5000,
+    "duration": "Per Day",
+    "rating": 4.9,
+    "availability": "24/7 Available",
+    "description": "Compassionate palliative care service focused on comfort, dignity, and holistic emotional support for patients facing serious illnesses. Our trained professionals provide pain management assistance, medical supervision, family counseling, and comfort-centered care planning. We prioritize quality of life while offering continuous guidance to both patients and their families.",
+    "image": "https://res.cloudinary.com/dtxtatusv/image/upload/v1771140405/What-is-Palliative-Care-1570x1196-1-785x598_iuhyah.jpg",
+    "features": [
+      "Pain management support",
+      "Emotional counseling",
+      "Medical supervision",
+      "Family guidance",
+      "Comfort-focused care"
+    ]
+  }
+]
