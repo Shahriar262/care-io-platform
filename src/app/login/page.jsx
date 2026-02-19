@@ -1,9 +1,8 @@
-import dynamic from "next/dynamic";
+import LoginForm from '@/components/forms/LoginForm'
+import React from 'react'
 
-const LoginForm = dynamic(() => import("@/components/forms/LoginForm"), {
-  ssr: false,
-});
-
-export default function LoginPage() {
-  return <LoginForm />;
+export default function LoginPge() {
+  return (
+    <div><LoginForm></LoginForm></div>
+  )
 }
