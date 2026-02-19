@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import NextAuthProvider from "@/provider/NextAuthProvider";
 
 const poppins = Poppins({
   weight: ["100", "200", "400", "500", "600", "800"],
@@ -16,9 +17,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} bg-base-200 antialiased`}>
-        <Navbar />
-        <main className="mb-25">{children}</main>
-        <Footer />
+        <NextAuthProvider>
+          <Navbar />
+          <main className="mb-25">{children}</main>
+          <Footer />
+        </NextAuthProvider>
       </body>
     </html>
   );

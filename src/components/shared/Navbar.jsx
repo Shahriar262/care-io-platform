@@ -3,10 +3,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSession, signOut } from "next-auth/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const { data: session } = useSession();
 
   const menu = [
     { name: "Home", href: "/" },
@@ -19,9 +21,8 @@ const Navbar = () => {
     <nav className="bg-base-100 shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 ">
         <div className="flex justify-between h-16">
-          {/* Logo */}
+          {/* Logo + Hamburger */}
           <div className="flex items-center gap-2">
-
             {/* Mobile Hamburger */}
             <div className="lg:hidden ml-3">
               <button
@@ -57,7 +58,7 @@ const Navbar = () => {
               </button>
             </div>
 
-            {/* logo */}
+            {/* Logo */}
             <Link
               href="/"
               className="text-2xl md:text-3xl font-bold text-neutral-content"
@@ -83,11 +84,20 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Login Button */}
+          {/* Login / Logout Button */}
           <div className="flex items-center">
-            <Link href="/login" className="btn btn-primary btn-sm md:btn-md">
-              Login
-            </Link>
+            {session ? (
+              <button
+                onClick={() => signOut({ callbackUrl: "/" })}
+                className="btn btn-primary btn-sm md:btn-md"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link href="/login" className="btn btn-primary btn-sm md:btn-md">
+                Login
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -110,6 +120,24 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+
+            {/* Mobile Login / Logout */}
+            {session ? (
+              <button
+                onClick={() => signOut({ callbackUrl: "/" })}
+                className="block btn btn-primary w-full text-center"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                href="/login"
+                className="block btn btn-primary w-full text-center"
+                onClick={() => setIsOpen(false)}
+              >
+                Login
+              </Link>
+            )}
           </div>
         </div>
       )}

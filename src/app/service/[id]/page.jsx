@@ -1,5 +1,6 @@
 import { getServiceById } from "@/app/actions/serviceActions";
-import ServiceDetailsClient from "./serviceDetailsClient";
+import ServiceDetailsClient from "./ServiceDetailsClient";
+
 
 
 export default async function ServicePage({ params }) {

@@ -1,81 +1,99 @@
 "use client";
 
-import { signIn } from "next-auth/react";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { signIn } from "next-auth/react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { FcGoogle } from "react-icons/fc";
 
-const LoginForm = () => {
+export default function LoginForm() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // 🔥 Get callbackUrl from query
+  const callbackUrl = searchParams.get("callbackUrl") || "/";
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  /* =========================
+     CREDENTIAL LOGIN
+  ========================= */
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
-    const form = e.target;
-    const email = form.email.value;
-    const password = form.password.value;
 
     const res = await signIn("credentials", {
       email,
       password,
       redirect: false,
+      callbackUrl, // 🔥 VERY IMPORTANT
     });
 
-    if (res.error) {
+    if (res?.error) {
       setError("Invalid email or password");
     } else {
-      router.push("/");
-      router.refresh();
+      router.push(callbackUrl); // 🔥 redirect properly
+      router.refresh(); // ensure session refresh
     }
   };
 
+  /* =========================
+     GOOGLE LOGIN
+  ========================= */
+  const handleGoogleSignIn = async () => {
+    await signIn("google", {
+      callbackUrl, // 🔥 respect original page
+    });
+  };
+
   return (
-    <div className="card w-full max-w-md shadow-xl bg-base-100 mx-auto">
-      <div className="card-body">
-        <h2 className="text-2xl font-bold text-center">Login</h2>
+    <div className="max-w-md mx-auto my-16 p-6 bg-base-100 shadow-lg rounded-md">
+      <h1 className="text-2xl font-bold mb-4 text-center">Login</h1>
 
-        {error && (
-          <p className="text-red-500 text-sm text-center">{error}</p>
-        )}
+      {error && (
+        <p className="text-error mb-2 text-center">{error}</p>
+      )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="input input-bordered w-full"
+          required
+        />
 
-          <div>
-            <label className="label">Email</label>
-            <input
-              type="email"
-              name="email"
-              className="input input-bordered w-full"
-              required
-            />
-          </div>
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="input input-bordered w-full"
+          required
+        />
 
-          <div>
-            <label className="label">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="input input-bordered w-full"
-              required
-            />
-          </div>
+        <button type="submit" className="btn btn-primary w-full">
+          Login
+        </button>
+      </form>
 
-          <button className="btn btn-primary w-full">
-            Login
-          </button>
-        </form>
+      <div className="divider">OR</div>
 
-        <p className="text-sm text-center mt-4">
-          Don’t have an account?{" "}
-          <Link href="/register" className="text-primary font-semibold">
-            Register
-          </Link>
-        </p>
-      </div>
+      <button
+        onClick={handleGoogleSignIn}
+        className="btn btn-outline w-full flex justify-center items-center gap-2"
+      >
+        <FcGoogle size={24} /> Sign in with Google
+      </button>
+
+      <p className="mt-4 text-center">
+        Don't have an account?{" "}
+        <a href="/register" className="text-accent font-semibold">
+          Register
+        </a>
+      </p>
     </div>
   );
-};
-
-export default LoginForm;
+}
