@@ -1,10 +1,9 @@
-import { Suspense } from "react";
-import LoginForm from "@/components/forms/LoginForm";
+import dynamic from "next/dynamic";
+
+const LoginForm = dynamic(() => import("@/components/forms/LoginForm"), {
+  ssr: false,
+});
 
 export default function LoginPage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <LoginForm />
-    </Suspense>
-  );
+  return <LoginForm />;
 }
